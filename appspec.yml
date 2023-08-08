@@ -6,13 +6,9 @@ files:
 
 hooks:
   ApplicationStop:
-    - location: scripts/application-stop.sh
+    - location: scripts/before_deploy.sh
       timeout: 300    # Maximum time allowed for the script to complete
 
-  AfterInstall:
-    - location: scripts/after-install.sh
-      timeout: 300
-
   ApplicationStart:
-    - location: scripts/application-start.sh
+    - location: scripts/after_deploy.sh
       timeout: 300

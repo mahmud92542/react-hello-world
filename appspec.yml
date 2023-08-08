@@ -4,11 +4,11 @@ files:
   - source: /
     destination: /home/ubuntu/react/react-hello-world   # Destination directory on the EC2 instance
 
-# hooks:
-#   ApplicationStop:
-#     - location: scripts/before_deploy.sh
-#       timeout: 300    # Maximum time allowed for the script to complete
+hooks:
+  ApplicationStop:
+    - location: scripts/before_deploy.sh
+      timeout: 300    # Maximum time allowed for the script to complete
 
-#   ApplicationStart:
-#     - location: scripts/after_deploy.sh
-#       timeout: 300
+  ApplicationStart:
+    - location: scripts/after_deploy.sh
+      timeout: 300

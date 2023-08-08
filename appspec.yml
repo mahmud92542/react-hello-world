@@ -1,0 +1,18 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /home/ubuntu/react/react-hello-world   # Destination directory on the EC2 instance
+
+hooks:
+  ApplicationStop:
+    - location: scripts/application-stop.sh
+      timeout: 300    # Maximum time allowed for the script to complete
+
+  AfterInstall:
+    - location: scripts/after-install.sh
+      timeout: 300
+
+  ApplicationStart:
+    - location: scripts/application-start.sh
+      timeout: 300

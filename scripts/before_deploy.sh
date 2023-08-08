@@ -11,6 +11,3 @@ rm -rf /home/ubuntu/react/react-hello-world/*
 
 # Navigate to the directory containing build.zip
 cd /home/ubuntu/react/react-hello-world
-
-# Unzip the build.zip file
-unzip build.zip

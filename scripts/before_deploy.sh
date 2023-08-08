@@ -11,15 +11,3 @@ fi
 
 # Remove the directory contents
 rm -rf /home/ubuntu/react/react-hello-world/*
-
-# Navigate to the directory containing build.zip
-cd /home/ubuntu/react/react-hello-world
-
-# Check if the build.zip file exists before unzipping
-if [ -f build.zip ]; then
-    # Unzip the build.zip file
-    unzip build.zip
-else
-    echo "Error: build.zip not found"
-    exit 1
-fi

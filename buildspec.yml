@@ -1,0 +1,32 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 14
+    commands:
+      - echo "Installing dependencies..."
+      - npm install
+
+  pre_build:
+    commands:
+      - echo "Running pre-build tasks..."
+      # You can add any pre-build tasks here before the actual build step.
+
+  build:
+    commands:
+      - echo "Building the React app..."
+      - npm run build
+      # You might need to adjust the build command based on your app's setup.
+      # This assumes you have a build script defined in your package.json.
+
+  post_build:
+    commands:
+      - echo "Running post-build tasks..."
+      # You can add any post-build tasks here after the build step.
+      # For example, deploying the built app to a web server or S3 bucket.
+
+artifacts:
+  files:
+    - '**/*'
+  base-directory: build
